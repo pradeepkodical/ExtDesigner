@@ -1,0 +1,156 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{40C88226-4D3F-4C9F-A60E-550D99AE672C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PKExtDesigner</RootNamespace>
+    <AssemblyName>PKExtDesigner</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.mshtml, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files\Microsoft.NET\Primary Interop Assemblies\Microsoft.mshtml.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CodeGen\JSBeautifier.cs" />
+    <Compile Include="CodeGen\PKExtCodeGenerator.cs" />
+    <Compile Include="Designer\ExtDesignerUI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Designer\ExtDesignerUI.Designer.cs">
+      <DependentUpon>ExtDesignerUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Designer\PKInfoBox.cs" />
+    <Compile Include="State\PKDesignerState.cs" />
+    <Compile Include="Designer\PKBoxResizer.cs" />
+    <Compile Include="ExtApplication.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExtApplication.Designer.cs">
+      <DependentUpon>ExtApplication.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExtApplication.resx">
+      <DependentUpon>ExtApplication.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserComponentsUI.resx">
+      <DependentUpon>UserComponentsUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="UserComponentsUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserComponentsUI.Designer.cs">
+      <DependentUpon>UserComponentsUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Visitors\Code\PKExt3ItemDefVisitor.cs" />
+    <Compile Include="Visitors\Code\PKFieldCodeGenVisitor.cs" />
+    <Compile Include="Visitors\PKFieldTreeNodeVisitor.cs" />
+    <Compile Include="Visitors\Code\PKExt3CodeGenVisitor.cs" />
+    <Compile Include="Visitors\PKItemCanAddVisitor.cs" />
+    <Compile Include="Visitors\PKItemAddVisitor.cs" />
+    <Compile Include="Visitors\PKContextMenuVisitor.cs" />
+    <Compile Include="Visitors\PKSizeModifyVisitor.cs" />
+    <Compile Include="Visitors\PKTreeNodeVisitor.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Icons\page.png" />
+    <Content Include="Icons\delete.png" />
+    <Content Include="Icons\open.png" />
+    <Content Include="Icons\save.png" />
+    <Content Include="Icons\paste.png" />
+    <Content Include="Icons\copy.png" />
+    <Content Include="Icons\column.png" />
+    <Content Include="Icons\table.png" />
+    <Content Include="Icons\field.png" />
+    <Content Include="Icons\container.png" />
+    <Content Include="Icons\text.png" />
+    <None Include="Resources\ui-button-default.png" />
+    <None Include="Resources\ui-radio-button.png" />
+    <None Include="Resources\ui-check-box.png" />
+    <None Include="Resources\ui-combo-box-blue.png" />
+    <None Include="Resources\ui-combo-box-calendar.png" />
+    <None Include="Resources\application-blue.png" />
+    <None Include="Resources\blue-document-code.png" />
+    <None Include="Resources\layers-arrange-back.png" />
+    <None Include="Resources\clipboard-paste-image.png" />
+    <None Include="Resources\blue-document-copy.png" />
+    <None Include="Resources\arrow-circle-315.png" />
+    <None Include="Resources\arrow-circle-225-left.png" />
+    <None Include="Resources\paper-bag-recycle.png" />
+    <None Include="Resources\scissors-blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PKExtFramework\PKExtFramework.csproj">
+      <Project>{CE0A005F-BA19-4096-99E7-3FB1593CDDFA}</Project>
+      <Name>PKExtFramework</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

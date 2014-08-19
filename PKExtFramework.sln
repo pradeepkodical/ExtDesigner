@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PKExtFramework", "PKExtFramework\PKExtFramework.csproj", "{CE0A005F-BA19-4096-99E7-3FB1593CDDFA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PKExtDesigner", "PKExtDesigner\PKExtDesigner.csproj", "{40C88226-4D3F-4C9F-A60E-550D99AE672C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CE0A005F-BA19-4096-99E7-3FB1593CDDFA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CE0A005F-BA19-4096-99E7-3FB1593CDDFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CE0A005F-BA19-4096-99E7-3FB1593CDDFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CE0A005F-BA19-4096-99E7-3FB1593CDDFA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{40C88226-4D3F-4C9F-A60E-550D99AE672C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{40C88226-4D3F-4C9F-A60E-550D99AE672C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{40C88226-4D3F-4C9F-A60E-550D99AE672C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{40C88226-4D3F-4C9F-A60E-550D99AE672C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

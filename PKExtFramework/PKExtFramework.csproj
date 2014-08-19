@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{CE0A005F-BA19-4096-99E7-3FB1593CDDFA}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PKExtFramework</RootNamespace>
+    <AssemblyName>PKExtFramework</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Ext\Component\Tab\PKTab.cs" />
+    <Compile Include="Ext\Component\Tab\PKTabButton.cs" />
+    <Compile Include="Ext\Component\Tab\PKTabPanelBody.cs" />
+    <Compile Include="Ext\Component\Tab\PKTabBar.cs" />
+    <Compile Include="Ext\Component\Tab\PKTabPanel.cs" />
+    <Compile Include="Ext\Component\Fields\PKTextAreaField.cs" />
+    <Compile Include="Ext\Component\Fields\PKNumberField.cs" />
+    <Compile Include="Ext\Component\Fields\PKLabelField.cs" />
+    <Compile Include="Ext\Component\Bar\PKBottombar.cs" />
+    <Compile Include="Ext\Component\Bar\PKToolbar.cs" />
+    <Compile Include="Ext\Component\Fields\PKRadioField.cs" />
+    <Compile Include="Ext\Component\Fields\PKCheckField.cs" />
+    <Compile Include="Ext\Component\Fields\PKComboField.cs" />
+    <Compile Include="Ext\Component\Fields\PKDateField.cs" />
+    <Compile Include="Ext\Component\Fields\PKTextField.cs" />
+    <Compile Include="Ext\Component\PKButton.cs" />
+    <Compile Include="Ext\Component\Panel\PKPanelFooter.cs" />
+    <Compile Include="Ext\Component\Panel\PKPanelBody.cs" />
+    <Compile Include="Ext\Component\Panel\PKPanelHeader.cs" />
+    <Compile Include="Ext\Drawing\PKFonts.cs" />
+    <Compile Include="Ext\GDI\PKRoundedRectangle.cs" />
+    <Compile Include="Ext\Layout\PKCard.cs" />
+    <Compile Include="Persistance\PKFlatItems.cs" />
+    <Compile Include="Persistance\PKStorage.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Ext\Component\Grid\PKColumn.cs" />
+    <Compile Include="Ext\Component\PKBoxItem.cs" />
+    <Compile Include="Ext\Component\PKContainer.cs" />
+    <Compile Include="Ext\Component\Fields\PKField.cs" />
+    <Compile Include="Ext\Component\Fields\PKFieldItem.cs" />
+    <Compile Include="Ext\Component\PKControl.cs" />
+    <Compile Include="Ext\Component\Panel\PKPanel.cs" />
+    <Compile Include="Ext\Component\Grid\PKGrid.cs" />
+    <Compile Include="Ext\Component\Grid\PKGridColumnRow.cs" />
+    <Compile Include="Ext\Component\Fields\PKText.cs" />
+    <Compile Include="Ext\Drawing\PKBrushes.cs" />
+    <Compile Include="Ext\Drawing\PKBrush.cs" />
+    <Compile Include="Ext\Drawing\PKColor.cs" />
+    <Compile Include="Ext\Drawing\PKEnums.cs" />
+    <Compile Include="Ext\Drawing\PKFont.cs" />
+    <Compile Include="Ext\Drawing\PKGraphics.cs" />
+    <Compile Include="Ext\Drawing\PKPen.cs" />
+    <Compile Include="Ext\Drawing\PKPens.cs" />
+    <Compile Include="Ext\Drawing\PKPoint.cs" />
+    <Compile Include="Ext\Drawing\PKSize.cs" />
+    <Compile Include="Ext\GDI\PKGDIGraphics.cs" />
+    <Compile Include="Ext\Layout\PKFit.cs" />
+    <Compile Include="Ext\Layout\PKForm.cs" />
+    <Compile Include="Ext\Layout\PKHBox.cs" />
+    <Compile Include="Ext\Layout\PKLayout.cs" />
+    <Compile Include="Ext\Layout\PKVBox.cs" />
+    <Compile Include="TypeConverters\LayoutConverter.cs" />
+    <Compile Include="Utility\SequenceGenerator.cs" />
+    <Compile Include="Visitors\PKFieldElementCreateVisitor.cs" />
+    <Compile Include="Visitors\PKFieldVisitor.cs" />
+    <Compile Include="Visitors\PKFlatElementCreateVisitor.cs" />
+    <Compile Include="Visitors\PKElementCreateVisitor.cs" />
+    <Compile Include="Visitors\PKElementParentVistor.cs" />
+    <Compile Include="Visitors\PKFlatElementFieldCreateVisitor.cs" />
+    <Compile Include="Visitors\PKVisitor.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
